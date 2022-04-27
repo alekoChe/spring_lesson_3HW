@@ -31,4 +31,8 @@ public class ProductInMemoryRepository implements Repository{
         return productList.stream().filter(p -> p.getId().equals(id)).findFirst().orElseThrow(RuntimeException::new);
     }
 
+    public List<Product> showProductList() {
+        return productList;
+    }
+
 }
